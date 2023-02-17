@@ -1,0 +1,28 @@
+.Category {
+  padding: 0.5rem;
+  background: #ebecf0;
+  border-radius: 5px;
+  height: fit-content;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.Category ul {
+  margin-bottom: 0.5rem;
+}
+
+.Category form {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Category {
+    height: auto;
+  }
+}

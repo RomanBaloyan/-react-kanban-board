@@ -1,0 +1,12 @@
+.Textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  min-height: 10rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #fff;
+}
