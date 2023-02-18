@@ -5,5 +5,5 @@
 }
 
 .content {
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
