@@ -12,7 +12,7 @@ const ChangeForm = ({ task, handleClose }) => {
 
   const [fields, setFields] = useState({
     title: task.title,
-    description: task.description,
+    description: task.description || "",
   });
 
   const handleChange = (e) => {
@@ -24,14 +24,18 @@ const ChangeForm = ({ task, handleClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!fields.title) {
+
+    const title = fields.title.trim("");
+    const description = fields.description.trim("");
+
+    if (!title) {
       alert("Title cannot be empty");
       return;
     }
 
     const changedTask = {
-      title: fields.title,
-      description: fields.description,
+      title,
+      description,
       id: task.id,
     };
 
