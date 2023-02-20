@@ -16,17 +16,10 @@ const ChangeForm = ({ task, handleClose }) => {
   });
 
   const handleChange = (e) => {
-    if (e.target.tagName === "TEXTAREA") {
-      setFields({
-        ...fields,
-        description: e.target.value,
-      });
-    } else if (e.target.tagName === "INPUT") {
-      setFields({
-        ...fields,
-        title: e.target.value,
-      });
-    }
+    setFields({
+      ...fields,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -60,8 +53,12 @@ const ChangeForm = ({ task, handleClose }) => {
               <CloseIcon />
             </button>
           </div>
-          <Input value={fields.title} onChange={handleChange} />
-          <Textarea value={fields.description} onChange={handleChange} />
+          <Input name={"title"} value={fields.title} onChange={handleChange} />
+          <Textarea
+            name={"description"}
+            value={fields.description}
+            onChange={handleChange}
+          />
           <Button appearance={"light"} type="submit">
             Submit
           </Button>

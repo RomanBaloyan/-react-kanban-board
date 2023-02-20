@@ -1,8 +1,13 @@
 import styles from "./Textarea.module.css";
 
-const Textarea = ({ value, onChange }) => {
+const Textarea = ({ value, name, onChange }) => {
   return (
-    <textarea className={styles.Textarea} onChange={onChange} value={value} />
+    <textarea
+      className={styles.Textarea}
+      name={name}
+      onChange={onChange}
+      value={value}
+    />
   );
 };
 
