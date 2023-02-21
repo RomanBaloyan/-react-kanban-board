@@ -25,10 +25,10 @@ const ChangeForm = ({ task, handleClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const title = fields.title.trim("");
-    const description = fields.description.trim("");
+    const title = fields.title.trim();
+    const description = fields.description.trim();
 
-    if (!title) {
+    if (!title.length) {
       alert("Title cannot be empty");
       return;
     }
